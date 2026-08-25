@@ -4,67 +4,54 @@
 <head>
   <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Richard R. Araújo — WebDev</title>
+  <title>Richard R. Araújo — WebDev</title>
 
-<meta
-  name="description"
-  content="Portfólio de Richard R. Araújo — desenvolvedor Front-End com foco em desenvolvimento web, JavaScript, Node.js, APIs, bancos de dados e interfaces responsivas."
->
+  <meta name="description"
+    content="Portfólio de Richard R. Araújo — desenvolvedor Front-End com foco em desenvolvimento web, JavaScript, Node.js, APIs, bancos de dados e interfaces responsivas.">
 
-<meta
-  name="author"
-  content="Richard R. Araújo"
->
+  <meta name="author" content="Richard R. Araújo">
 
-<meta
-  name="keywords"
-  content="Richard R. Araújo, Desenvolvedor Front-End, Web Developer, JavaScript, HTML, CSS, Node.js, APIs, SQL, MySQL, PostgreSQL, SQLite, Supabase, GitHub"
->
+  <meta name="keywords"
+    content="Richard R. Araújo, Desenvolvedor Front-End, Web Developer, JavaScript, HTML, CSS, Node.js, APIs, SQL, MySQL, PostgreSQL, SQLite, Supabase, GitHub">
 
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
 
-<!-- ========================================= -->
-<!-- FAVICON / ÍCONE                           -->
-<!-- ========================================= -->
+  <!-- ========================================= -->
+  <!-- FAVICON / ÍCONE                           -->
+  <!-- ========================================= -->
 
 
 
-<link rel="icon" href="">
+  <link rel="icon" href="">
 
 
 
-<!-- ========================================= -->
-<!-- FONTES                                    -->
-<!-- ========================================= -->
+  <!-- ========================================= -->
+  <!-- FONTES                                    -->
+  <!-- ========================================= -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
-  rel="stylesheet"
->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
-<!-- ========================================= -->
-<!-- OPEN GRAPH                                -->
-<!-- ========================================= -->
+  <!-- ========================================= -->
+  <!-- OPEN GRAPH                                -->
+  <!-- ========================================= -->
 
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 
-<meta
-  property="og:title"
-  content="Richard R. Araújo — Desenvolvedor Front-End & Web Developer"
->
+  <meta property="og:title" content="Richard R. Araújo — Desenvolvedor Front-End & Web Developer">
 
-<meta
-  property="og:description"
-  content="Portfólio de Richard R. Araújo — projetos em desenvolvimento web, Front-End, JavaScript, Node.js, APIs e bancos de dados."
->
+  <meta property="og:description"
+    content="Portfólio de Richard R. Araújo — projetos em desenvolvimento web, Front-End, JavaScript, Node.js, APIs e bancos de dados.">
 
-<!--
+  <!--
   Quando tiver uma imagem para compartilhamento,
   coloque o caminho aqui.
 
@@ -72,39 +59,34 @@
   <meta property="og:image" content="https://seusite.com/assets/og-image.png">
 -->
 
-<meta property="og:image" content="">
+  <meta property="og:image" content="">
 
-<!--
+  <!--
   URL definitiva do seu portfólio.
 
   Exemplo:
   <meta property="og:url" content="https://seusite.com">
 -->
 
-<meta property="og:url" content="">
+  <meta property="og:url" content="">
 
-<meta property="og:site_name" content="Richard R. Araújo">
+  <meta property="og:site_name" content="Richard R. Araújo">
 
-<meta property="og:locale" content="pt_BR">
+  <meta property="og:locale" content="pt_BR">
 
-<!-- ========================================= -->
-<!-- TWITTER / X CARD                         -->
-<!-- ========================================= -->
+  <!-- ========================================= -->
+  <!-- TWITTER / X CARD                         -->
+  <!-- ========================================= -->
 
-<meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary_large_image">
 
-<meta
-  name="twitter:title"
-  content="Richard R. Araújo — Desenvolvedor Front-End & Web Developer"
->
+  <meta name="twitter:title" content="Richard R. Araújo — Desenvolvedor Front-End & Web Developer">
 
-<meta
-  name="twitter:description"
-  content="Portfólio de Richard R. Araújo — desenvolvimento web, Front-End, JavaScript, Node.js, APIs e bancos de dados."
->
+  <meta name="twitter:description"
+    content="Portfólio de Richard R. Araújo — desenvolvimento web, Front-End, JavaScript, Node.js, APIs e bancos de dados.">
 
 
-<meta name="twitter:image" content="">
+  <meta name="twitter:image" content="">
 
 
   <style>
@@ -987,9 +969,36 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+
+     grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+
+
+      grid-template-areas:
+        "copy photo"
+        "copy stats";
+
+      column-gap: 80px;
+
+      align-items: start;
+    }
+
+    .about-copy {
+  grid-area: copy;
+  margin-left: -100px;
+}
+
+    .about-photo {
+      grid-area: photo;
+    }
+
+    .stat-grid {
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 14px;
+
+      width: 100%;
     }
 
     .about-copy p {
@@ -1268,6 +1277,241 @@
         opacity: 1;
         transform: none;
       }
+    }
+
+    /* =========================================
+   FOTO — SEÇÃO SOBRE
+   ========================================= */
+
+    .about-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .about-photo-frame {
+      width: min(100%, 340px);
+      aspect-ratio: 1 / 1;
+
+      position: relative;
+      overflow: hidden;
+
+      border-radius: 28px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      background:
+        linear-gradient(145deg,
+          rgba(47, 91, 255, 0.12),
+          rgba(6, 8, 18, 0.8));
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        0 0 45px rgba(47, 91, 255, 0.08);
+
+      isolation: isolate;
+
+      transition:
+        transform 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+    }
+
+
+    /* Foto */
+
+    .about-photo-frame img {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+      object-position: center;
+
+      filter: saturate(0.9) contrast(1.03);
+
+      transform: scale(1.01);
+
+      transition:
+        transform 0.7s cubic-bezier(.2, .8, .2, 1),
+        filter 0.5s ease;
+    }
+
+
+    /* Gradiente sobre a foto */
+
+    .about-photo-overlay {
+      position: absolute;
+      inset: 0;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(180deg,
+          rgba(5, 7, 16, 0.02) 45%,
+          rgba(5, 7, 16, 0.55) 100%);
+    }
+
+
+    /* Brilho discreto */
+
+    .about-photo-frame::before {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      top: -90px;
+      right: -90px;
+
+      border-radius: 50%;
+
+      background: rgba(47, 91, 255, 0.18);
+
+      filter: blur(45px);
+
+      z-index: 2;
+
+      pointer-events: none;
+    }
+
+
+    /* Pequena linha de interface */
+
+    .about-photo-frame::after {
+      content: "";
+
+      position: absolute;
+
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+
+      height: 1px;
+
+      background:
+        linear-gradient(90deg,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0));
+
+      z-index: 3;
+
+      pointer-events: none;
+    }
+
+
+    /* Label */
+
+    .about-photo-label {
+      position: absolute;
+
+      left: 18px;
+      bottom: 27px;
+
+      z-index: 4;
+
+      font-size: 10px;
+      letter-spacing: 0.12em;
+
+      color: rgba(255, 255, 255, 0.72);
+
+      background: rgba(5, 7, 16, 0.62);
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      backdrop-filter: blur(10px);
+
+      padding: 6px 9px;
+
+      border-radius: 7px;
+    }
+
+
+    /* Pequenos detalhes nos cantos */
+
+    .about-photo-corner {
+      position: absolute;
+
+      width: 22px;
+      height: 22px;
+
+      z-index: 4;
+
+      pointer-events: none;
+
+      border-color: rgba(255, 255, 255, 0.4);
+      border-style: solid;
+    }
+
+    .corner-top {
+      top: 14px;
+      right: 14px;
+
+      border-width: 1px 1px 0 0;
+
+      border-radius: 0 7px 0 0;
+    }
+
+    .corner-bottom {
+      bottom: 14px;
+      left: 14px;
+
+      border-width: 0 0 1px 1px;
+
+      border-radius: 0 0 0 7px;
+    }
+
+
+    /* Hover */
+
+    .about-photo-frame:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(79, 120, 255, 0.35);
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        0 0 55px rgba(47, 91, 255, 0.13);
+    }
+
+    .about-photo-frame:hover img {
+      transform: scale(1.045);
+
+      filter: saturate(1) contrast(1.04);
+    }
+
+
+    /* =========================================
+   RESPONSIVIDADE FOTO
+   ========================================= */
+
+    @media (max-width: 900px) {
+
+      .about-photo-frame {
+        width: min(100%, 300px);
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .about-photo {
+        margin: 10px 0 20px;
+      }
+
+      .about-photo-frame {
+        width: min(100%, 280px);
+        border-radius: 22px;
+      }
+
     }
   </style>
 </head>
@@ -1720,7 +1964,8 @@
 
               <div class="project-links">
 
-                <a href="https://github.com/Richter06/mayk-vs-aliens" class="project-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Richter06/mayk-vs-aliens" class="project-link" target="_blank"
+                  rel="noopener noreferrer">
                   GitHub
 
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1758,13 +2003,7 @@
 
           <div class="about-copy" data-reveal="left">
 
-            <span class="eyebrow">
 
-              <span class="dot"></span>
-
-              sobre mim
-
-            </span>
 
             <h2 class="section-title" style="margin-bottom:20px;">
               Desenvolvedor, designer e criador.
@@ -1773,39 +2012,51 @@
 
             <p>
 
-              Sou Richard R. Araújo, estudante de Análise e
-              Desenvolvimento de Sistemas com foco em desenvolvimento
-              front-end e criação de interfaces web.
+              Sou Richard R. Araújo, estudante de Análise e Desenvolvimento de
+              Sistemas com foco em desenvolvimento web, especialmente Front-End,
+              integração de APIs e construção de aplicações que trabalham com
+              dados.
 
             </p>
-
 
             <p>
 
-              Tenho experiência prática com HTML, CSS e JavaScript,
-              desenvolvendo landing pages, sites institucionais e
-              aplicações web. Também possuo conhecimentos em bancos
-              de dados e desenvolvimento de soluções utilizando SQL,
-              MySQL e PostgreSQL.
+              Tenho experiência prática com HTML, CSS e JavaScript, desenvolvendo
+              interfaces responsivas, landing pages, sites e aplicações web.
+              Também venho desenvolvendo uma base sólida em bancos de dados,
+              trabalhando com SQL, MySQL, PostgreSQL e SQLite, realizando consultas,
+              organização, manipulação e integração de dados com aplicações.
 
             </p>
-
 
             <p>
 
-              Minha formação em design gráfico complementa minha
-              atuação no desenvolvimento web, permitindo unir
-              programação, composição visual, usabilidade e
-              experiência do usuário em um mesmo projeto.
+              Além do desenvolvimento tradicional, utilizo ferramentas de
+              Inteligência Artificial como parte do meu processo de aprendizado
+              e desenvolvimento, explorando novas tecnologias, analisando
+              problemas, pesquisando soluções e experimentando ideias na prática.
+              Minha curiosidade por tecnologia me leva constantemente a aprender
+              algo novo e transformar esse conhecimento em projetos reais.
 
             </p>
+
+            <p>
+
+              Meu objetivo é continuar evoluindo como desenvolvedor, ampliando
+              meus conhecimentos em desenvolvimento web, bancos de dados, APIs,
+              back-end e Inteligência Artificial, sempre buscando entender não
+              apenas como uma tecnologia funciona, mas também como utilizá-la
+              para construir soluções melhores.
+
+            </p>
+
 
 
             <div class="skill-chips">
 
-              <span>HTML</span>
+              <span>HTML5</span>
 
-              <span>CSS</span>
+              <span>CSS3</span>
 
               <span>JavaScript</span>
 
@@ -1815,33 +2066,65 @@
 
               <span>Accessibility</span>
 
+              <span>DOM</span>
+
+              <span>Fetch API</span>
+
+              <span>REST APIs</span>
+
+              <span>Node.js</span>
+
+              <span>Express</span>
+
+              <span>npm</span>
+
               <span>SQL</span>
 
               <span>MySQL</span>
 
               <span>PostgreSQL</span>
 
-              <span>Node.js</span>
+              <span>SQLite</span>
 
-              <span>Express</span>
-
-              <span>Three.js</span>
+              <span>Supabase</span>
 
               <span>Git</span>
 
               <span>GitHub</span>
 
+              <span>Cloudflare</span>
+
               <span>Figma</span>
 
-              <span>Photoshop</span>
+              <span>Three.js</span>
 
-              <span>CorelDRAW</span>
-
-              <span>Canva</span>
+              <span>IA</span>
 
             </div>
 
           </div>
+
+
+          <div class="about-photo" data-reveal="right">
+
+            <div class="about-photo-frame">
+
+              <img src="assets/eu.png" alt="Richard R. Araújo — Desenvolvedor Web">
+
+              <div class="about-photo-overlay"></div>
+
+              <div class="about-photo-corner corner-top"></div>
+              <div class="about-photo-corner corner-bottom"></div>
+
+              <span class="about-photo-label mono">
+                RICHARD.R
+              </span>
+
+            </div>
+
+          </div>
+
+
 
 
           <div class="stat-grid" data-reveal="right">
